@@ -70,7 +70,7 @@
             </button>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                <h6 class="dropdown-header">Welcome to
+                <h6 class="dropdown-header">
                     @auth("web")
                         {{ Auth::user()->name }}
                     @endauth
@@ -83,8 +83,8 @@
 
                 @guest("web")
                     <a class="dropdown-item bg-primary" href="{{ route('showCheckPhoneNumberExist') }}">Проверить номер</a>
-                    <a class="dropdown-item" href="{{ route("login") }}">Login</a>
-                    <a class="dropdown-item" href="{{ route("register") }}">Register</a>
+                    <a class="dropdown-item" href="{{ route("login") }}">Логин</a>
+                    <a class="dropdown-item" href="{{ route("register") }}">Регистрация</a>
                 @endguest
 
             </div>

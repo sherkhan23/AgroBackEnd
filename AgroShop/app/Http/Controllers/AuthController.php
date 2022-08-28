@@ -19,8 +19,8 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $data = $request->validate([
-            "phoneNumber" => ["required", "string"],
-            "password" => ["required"]
+            "phoneNumber" => ["required"],
+            "password" => ["required", "min:6"]
         ]);
 
         if(auth("web")->attempt($data)) {

@@ -14,7 +14,7 @@
                 <a class="navbar-brand" href="/">
                     <img src="media/logoAgro.png" id="logoAgro">
                 </a>
-                <h2 class="fw-bold mb-0 text-center text-secondary">Регестрация</h2>
+                <h2 class="fw-bold mb-0 text-center text-secondary">Регистрация</h2>
                 <form action="{{ route("register_process") }}" class="space-y-5" method="POST">
                     @csrf
 

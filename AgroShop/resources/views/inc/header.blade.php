@@ -1,34 +1,26 @@
 <div class="container-fluid px-5">
     <div class="row" id="header-row">
         <div class="col-md-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-main card-body text-center">
-                            <h5 class="card-title">Каталог</h5>
-                        </div>
-                    </div>
+            <div style="display: inline-flex; flex-wrap: wrap">
+                <div class="text-center d-flex">
+                    <button class="card-main btn p-4">
+                        Каталог
+                    </button>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-main card-body text-center">
-                            <h5 class="card-title">Избранное</h5>
-                        </div>
-                    </div>
+                <div class="text-center d-flex ml-3">
+                    <button class="card-main btn p-4">
+                        Избранное
+                    </button>
+                </div> <br>
+                <div class="text-center d-flex">
+                    <button class="card-main btn p-4 mt-3">
+                        Заявки
+                    </button>
                 </div>
-                <div class="col-md-6 mt-3">
-                    <div class="card">
-                        <div class="card-main card-body text-center">
-                            <h5 class="card-title">Заявки</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-3">
-                    <div class="card">
-                        <div class="card-main card-body text-center">
-                            <h5 class="card-title">Заказы</h5>
-                        </div>
-                    </div>
+                <div class="text-center d-flex ml-3">
+                    <button class="card-main btn p-4 mt-3">
+                        Заявки
+                    </button>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@
 
 
 </head>
-<div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+<div class="modal modal-signin position-static d-block bg-secondary py-5" style="" tabindex="-1" role="dialog" id="modalSignin">
     <div class="modal-dialog" role="document">
         <div class="modal-content rounded-4 shadow" style="border-radius: 30px">
             <div class="modal-header p-5 pb-4 border-bottom-0">
