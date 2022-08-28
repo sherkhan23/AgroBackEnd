@@ -1,0 +1,65 @@
+html, body{
+    margin-left: 0;
+    padding: 0;
+
+}
+#navbar-links > li>a:hover {
+    text-decoration: underline;
+
+}
+#mainSearch{
+    width: 400px;
+    border: 2px solid #FFC528;
+    border-radius: 10px;
+}
+#search-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+.nav-link{
+    margin-left: 10px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background: #FFC528;
+}
+
+.card{
+    border-radius: 20px;
+}
+
+#carousel-example-2{
+    display: flex;
+    width: 80%;
+    margin-top: 50px;
+}
+
+#slide-img2{
+    border-radius: 20px;
+    height: 550px;
+    border: 10px solid white !important;
+}
+.pic-partner{
+    width:60%;
+}
+
+
+#logoAgro{
+    width: 90%;
+}
+.card-main{
+    height: 215px;
+    width: 205px;
+    display: flex;
+    background-color: #FFC528;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color: white;
+    flex-wrap: wrap;
+}
+

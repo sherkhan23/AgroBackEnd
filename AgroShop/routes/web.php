@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
 })->name('home');
+
 
 
 Route::any('send_sms', [\App\Http\Controllers\SMSController::class, 'send'])->name('send_sms');
@@ -45,4 +43,3 @@ Route::middleware("guest:web")->group(function () {
 Route::get('/checkPhoneNumberExist', [\App\Http\Controllers\AuthController::class, 'showCheckPhoneNumberExist'])->name('showCheckPhoneNumberExist');
 Route::post('/checkPhoneNumberExist', [\App\Http\Controllers\AuthController::class, 'checkPhoneNumberExist'])->name('checkPhoneNumberExist');
 
-Route::post('/getFarmer', [\App\Http\Controllers\AuthController::class, 'getFarmer'])->name('getFarmer');

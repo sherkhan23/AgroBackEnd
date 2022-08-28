@@ -41,4 +41,4 @@ Route::middleware("guest:web")->group(function () {
 
 Route::post('/checkPhoneNumberExist', [\App\Http\Controllers\AuthController::class, 'checkPhoneNumberExist'])->name('checkPhoneNumberExist');
 
-Route::post('/getFarmer', [\App\Http\Controllers\AuthController::class, 'getFarmer'])->name('getFarmer');
+//Route::post('/getFarmer', [\App\Http\Controllers\AuthController::class, 'getFarmer'])->name('getFarmer');

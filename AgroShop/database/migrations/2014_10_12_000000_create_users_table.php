@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('phoneNumber')->unique();
             $table->boolean('farmer')->nullable();
-            $table->boolean('seller')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

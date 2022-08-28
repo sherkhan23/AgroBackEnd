@@ -19,15 +19,15 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $data = $request->validate([
-            "phoneNumber" => ["required"],
+            "phoneNumber" => ["required", "string"],
             "password" => ["required"]
         ]);
 
         if(auth("web")->attempt($data)) {
-            return redirect("/home");
+            return redirect(("/"));
         }
 
-        return redirect(route("login"))->withErrors(["phoneNumber" => "Пользователь не найден, либо данные введены не правильно"]);
+        return redirect(route("login"))->withErrors(["email" => "Пользователь не найден, либо данные введены не правильно"]);
     }
 
     public function logout()
@@ -47,7 +47,7 @@ class AuthController extends Controller
         return view("auth.forgot");
     }
 
-  //  public function userData(){
+    //  public function userData(){
     //        $data = User::orderBy('id')->take(1)->get();
     //        return view('/', [
     //            'User' => $data,
@@ -56,28 +56,20 @@ class AuthController extends Controller
     //    }
 
 
-
-    public function getFarmer(Request $request){
-        if(isset($_GET['farmer'])) {
-            session_start();
-            $_SESSION['farmer1'] = $_GET['farmer'];
-        }
-    }
-
     public function register(Request $request)
     {
         $data = $request->validate([
             "name" => ["required", "string"],
-            "phoneNumber" => ["required"],
-            "farmer" => ["required"],
-            "password" => ["required", 'min:6',"confirmed"]
+            "phoneNumber" => ["required", "string", "unique:users,phoneNumber"],
+            "farmer" => ['required'],
+            "password" => ["required", "confirmed"]
         ]);
 
         $user = User::create([
             "name" => $data["name"],
             "phoneNumber" => $data["phoneNumber"],
             "farmer" => $data["farmer"],
-            "password" => $data["password"]
+            "password" => bcrypt($data["password"])
         ]);
 
         if($user) {
@@ -85,14 +77,13 @@ class AuthController extends Controller
             auth("web")->login($user);
         }
 
-//        return redirect('/');
+        return redirect('/');
     }
 
     public function showProfile()
     {
         return view("profile");
     }
-
 
     public function showCheckPhoneNumberExist(){
         return view('auth.checkPhoneNumberExist');
@@ -111,5 +102,7 @@ class AuthController extends Controller
             return redirect('/register');
         }
     }
+
+
 
 }

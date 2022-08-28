@@ -1,28 +1,38 @@
 @extends('layouts.app')
-@section('title') Baspana @endsection
+@section('title') AgroShop @endsection
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap 5 -->
-    <link rel="shortcut icon" href="media/modern-skyscraper-building.jpeg" />
-
-    <link href="https://unpkg.com/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <!-- JavaScript and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    <!-- Bootstrap 5 end -->
-
+    <!-- Пакет JavaScript с Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <!-- Только CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    {{--  Bootstrap icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    {{--  /Bootstrap icons --}}
+
     <title>@yield('title')</title>
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Подключение библиотеки jQuery -->
+    <script src="jquery.js"></script>
+    <!-- Подключение jQuery плагина Masked Input -->
+    <script src="jquery.maskedinput.min.js"></script>
 </head>
+
 @section('content') @endsection
+@include('inc.navbar')
+@include('inc.header')
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5">Hello user</h1>
+</div>
 
 
-<h1>Hello user</h1>
+
